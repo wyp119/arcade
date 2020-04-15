@@ -1,0 +1,74 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable id="z4.Mu=c7uR%nb6@WIyZT">mySprite</variable><variable type="KIND_SpriteKind" id="|~,F(-N,j/rYO4C$8!70">Player</variable><variable type="KIND_SpriteKind" id="@*OZ[:h7UX^TonBO8c]n">Projectile</variable><variable type="KIND_SpriteKind" id="M6zUhgqr$%7{t63GgtYR">Food</variable><variable type="KIND_SpriteKind" id="^gR@}8h5tB.-$1sL$9h(">Enemy</variable><variable type="BLOCKLY_TILESET_TYPE" id="3k+nO_2d@sC1f%!`WBa=">0;16;16;0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</variable></variables><block type="pxt-on-start" x="-50" y="-30"><statement name="HANDLER"><block type="tilemap_editor"><field name="tilemap">tiles.createTilemap(
+            hex`10001000343536371f1f1f1f1f1f1f1f2d2526273c3d3e381f1f1f1f1f1f1f1f2c2124283b3f40391f48464646471f1f302322292f42413a1f441f1f1f441f1f2e3132331f441f1f1f4346471f441f1f1f44441f1f441f1f1f1f1f441f441f1f1f44441f1f434646464646451f441f48464b4b461f1f1f1f1f1f1f1f1f441f441f1f1f1f1f4846464646464646451f434646471f1f441f1f1f1f1f1f1f1f1f1f1f1f441f1f43464646471f4846471f484646451f1f1f1f1f1f441f441f441f441f1f1f1f1f48464646451f441f441f434646471f1f441f1f1f1f1f441f441f1f1f1f441f1f434646464646451f4346464646451f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f`,
+            img`
+. . . . . . . . . . . . . . . . 
+. . . . 2 2 2 2 2 2 2 2 . . . . 
+. . . . 2 . . . . . 2 2 . . . . 
+. . . . 2 . 2 2 2 . 2 2 . . . . 
+2 . 2 2 2 . . . 2 . 2 2 2 . . 2 
+2 . 2 2 2 2 2 . 2 . 2 2 2 . . 2 
+2 . . . . . . . 2 . 2 . . . . . 
+2 2 2 2 2 2 2 2 2 . 2 . 2 2 2 2 
+2 . . . . . . . . . 2 . . . . 2 
+2 . 2 2 2 2 2 2 2 2 2 2 2 2 . 2 
+2 . . . . . 2 . . . 2 . . . . 2 
+2 2 2 2 2 . 2 . 2 . 2 . 2 2 2 2 
+2 . . . . . 2 . 2 . 2 . . . . 2 
+2 . 2 2 2 2 2 . 2 . 2 2 2 2 . 2 
+2 . . . . . . . 2 . . . . . . 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+`,
+            [myTiles.tile0,sprites.dungeon.darkGroundWest,sprites.builtin.oceanDepths9,sprites.castle.tileGrass1,sprites.castle.tileGrass2,sprites.builtin.forestTiles0,sprites.castle.tilePath2,sprites.castle.tilePath1,sprites.castle.tilePath4,sprites.castle.tilePath7,sprites.castle.tilePath8,sprites.castle.tilePath9,sprites.castle.tilePath6,sprites.castle.tilePath3,sprites.castle.tileDarkGrass2,sprites.castle.tileDarkGrass3,sprites.castle.tileDarkGrass1,sprites.castle.tileGrass3,sprites.builtin.forestTiles6,sprites.builtin.forestTiles2,sprites.builtin.forestTiles5,sprites.builtin.forestTiles9,sprites.builtin.forestTiles13,sprites.builtin.forestTiles10,sprites.builtin.forestTiles29,sprites.builtin.forestTiles14,sprites.builtin.forestTiles15,sprites.builtin.forestTiles11,sprites.builtin.forestTiles7,sprites.builtin.forestTiles12,sprites.builtin.forestTiles20,sprites.builtin.oceanSand0,sprites.builtin.forestTiles27,sprites.dungeon.purpleInnerNorthWest,sprites.dungeon.purpleInnerSouthEast,sprites.dungeon.purpleInnerSouthWest,sprites.dungeon.purpleInnerNorthEast,sprites.dungeon.purpleOuterNorth0,sprites.dungeon.purpleOuterNorth1,sprites.dungeon.purpleOuterNorthEast,sprites.dungeon.purpleOuterEast0,sprites.dungeon.purpleOuterEast1,sprites.dungeon.purpleOuterSouth2,sprites.dungeon.greenOuterNorth2,sprites.dungeon.purpleOuterWest0,sprites.dungeon.purpleOuterNorthWest,sprites.dungeon.purpleOuterSouthEast,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.purpleOuterWest1,sprites.dungeon.purpleOuterSouth0,sprites.dungeon.purpleOuterSouth1,sprites.dungeon.purpleOuterSouthWest,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorth1,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterEast1,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterWest1,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenInnerNorthWest,sprites.dungeon.greenInnerNorthEast,sprites.dungeon.greenInnerSouthWest,sprites.dungeon.greenInnerSouthEast,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterSouth0,sprites.vehicle.roadTurn3,sprites.vehicle.roadVertical,sprites.vehicle.roadTurn4,sprites.vehicle.roadHorizontal,sprites.vehicle.roadTurn2,sprites.vehicle.roadTurn1,sprites.vehicle.roadIntersection3,sprites.vehicle.roadIntersection2,sprites.vehicle.roadIntersection1,sprites.vehicle.roadIntersection4],
+            TileScale.Sixteen
+        )</field><next><block type="variables_set"><field name="VAR" id="z4.Mu=c7uR%nb6@WIyZT">mySprite</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate"><value name="img"><shadow type="screen_image_picker"><field name="img">img`
+. . . . . . 5 . 5 . . . . . . . 
+. . . . . f 5 5 5 f f . . . . . 
+. . . . f 1 5 2 5 1 6 f . . . . 
+. . . f 1 6 6 6 6 6 1 6 f . . . 
+. . . f 6 6 f f f f 6 1 f . . . 
+. . . f 6 f f d d f f 6 f . . . 
+. . f 6 f d f d d f d f 6 f . . 
+. . f 6 f d 3 d d 3 d f 6 f . . 
+. . f 6 6 f d d d d f 6 6 f . . 
+. f 6 6 f 3 f f f f 3 f 6 6 f . 
+. . f f d 3 5 3 3 5 3 d f f . . 
+. . f d d f 3 5 5 3 f d d f . . 
+. . . f f 3 3 3 3 3 3 f f . . . 
+. . . f 3 3 5 3 3 5 3 3 f . . . 
+. . . f f f f f f f f f f . . . 
+. . . . . f f . . f f . . . . . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="mapplaceonrandomtile"><value name="sprite"><block type="variables_get"><field name="VAR" id="z4.Mu=c7uR%nb6@WIyZT">mySprite</field></block></value><value name="tile"><shadow type="tileset_tile_picker"><field name="tile">sprites.dungeon.greenInnerNorthWest</field></shadow></value><next><block type="game_show_long_text"><field name="layout">DialogLayout.Bottom</field><value name="str"><shadow type="text"><field name="TEXT">按A开始游戏</field></shadow></value><next><block type="spritesetsetflag"><field name="flag">SpriteFlag.StayInScreen</field><value name="sprite"><block type="variables_get"><field name="VAR" id="z4.Mu=c7uR%nb6@WIyZT">mySprite</field></block></value><value name="on"><shadow type="toggleOnOff"><field name="on">true</field></shadow></value><next><block type="game_control_sprite"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="true"></mutation><value name="sprite"><block type="variables_get"><field name="VAR" id="z4.Mu=c7uR%nb6@WIyZT">mySprite</field></block></value><value name="vx"><shadow type="math_number"><field name="NUM">150</field></shadow></value><value name="vy"><shadow type="math_number"><field name="NUM">150</field></shadow></value><next><block type="camerafollow"><value name="sprite"><block type="variables_get"><field name="VAR" id="z4.Mu=c7uR%nb6@WIyZT">mySprite</field></block></value><next><block type="gamecountdown"><value name="duration"><shadow type="math_number"><field name="NUM">35</field></shadow></value></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></statement></block><block type="screen_image_picker" disabled="true" x="310" y="-10"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . c c c c . . . . . . 
+. . . . . c c c c c c . . . . . 
+. . . . . c 2 2 2 2 2 . . . . . 
+. . . . c c 2 5 b 5 2 . . . . . 
+. . . c c 2 2 b b b 2 . . . . . 
+. . . c . . . 2 2 2 . f 8 . . . 
+. . . . f f 9 9 9 9 f f . . . . 
+. . . 8 f . 9 9 9 9 . . . . . . 
+. . . . . . 9 f f 9 . . . . . . 
+. . . . . . . 5 5 5 5 f . . . . 
+. . . . . . . 5 . . . . . . . . 
+. . . . . . . 5 . . . . . . . . 
+. . . . . . . f . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field></block><block type="spritesetimage" disabled="true" x="610" y="130"><value name="sprite"><block type="variables_get"><field name="VAR" id="z4.Mu=c7uR%nb6@WIyZT">mySprite</field></block></value><value name="img"><shadow type="screen_image_picker"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field></shadow></value></block><block type="spriteshittile" x="-50" y="490"><value name="HANDLER_DRAG_PARAM_sprite"><shadow type="argument_reporter_custom"><mutation typename="Sprite"/><field name="VALUE">sprite</field></shadow></value><value name="kind"><shadow type="spritekind"><field name="MEMBER">Player</field></shadow></value><value name="tile"><shadow type="tileset_tile_picker"><field name="tile">sprites.dungeon.purpleInnerNorthEast</field></shadow></value><value name="HANDLER_DRAG_PARAM_location"><shadow type="argument_reporter_custom"><mutation typename="tiles.Location"/><field name="VALUE">location</field></shadow></value><statement name="HANDLER"><block type="gameOver"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="1" _input_init="true"></mutation><field name="effect">effects.confetti</field><value name="win"><shadow type="toggleWinLose"><field name="win">true</field></shadow></value></block></statement></block></xml>
